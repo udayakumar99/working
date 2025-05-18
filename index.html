@@ -392,6 +392,40 @@
             />
           </div>
           <div class="col-md-4">
+            <select
+              class="form-select"
+              id="developerPosition"
+              required
+            >
+              <option value="">Select Position</option>
+              <option>Software Developer</option>
+              <option>Senior Developer</option>
+              <option>Software Tester</option>
+              <option>DevOps Engineer</option>
+              <option>Database Administrator</option>
+              <option>Project Manager</option>
+              <option>HR Manager</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Contact Number"
+              id="developerContact"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email Address"
+              id="developerEmail"
+              required
+            />
+          </div>
+          <div class="col-md-4">
             <select class="form-select" id="assignAssetType" required>
               <option value="">Select Asset Type</option>
               <option>Laptop</option>
@@ -403,7 +437,7 @@
               <option>macOS</option>
             </select>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <select class="form-select" id="assetBrand">
               <option>Dell</option>
               <option>HP</option>
@@ -412,7 +446,7 @@
               <option>Apple</option>
             </select>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <input
               type="text"
               class="form-control"
@@ -576,6 +610,9 @@
                 </div>
                 <div class="mb-2">
                   <strong>Developer ID:</strong> <span id="returnDevId"></span>
+                </div>
+                <div class="mb-2">
+                  <strong>Position:</strong> <span id="returnDevPosition"></span>
                 </div>
                 <div class="mb-2">
                   <strong>Contact:</strong> <span id="returnDevContact"></span>
@@ -1093,6 +1130,7 @@
         const mockDevData = {
           name: "Uday Kumar",
           id: "DEV001",
+          position: "Senior Developer",
           contact: "321456987",
           email: "uday@example.com",
           assets: [
@@ -1121,6 +1159,7 @@
         // Update developer information
         document.getElementById('returnDevName').textContent = devData.name;
         document.getElementById('returnDevId').textContent = devData.id;
+        document.getElementById('returnDevPosition').textContent = devData.position;
         document.getElementById('returnDevContact').textContent = devData.contact;
         document.getElementById('returnDevEmail').textContent = devData.email;
 
